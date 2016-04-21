@@ -5,6 +5,15 @@
  */
 
 /**
+ * Implements hook_ctools_plugin_api().
+ */
+function olinuris_library_cornell_edu_feature_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
+}
+
+/**
  * Implements hook_node_info().
  */
 function olinuris_library_cornell_edu_feature_node_info() {
@@ -21,14 +30,6 @@ function olinuris_library_cornell_edu_feature_node_info() {
       'name' => t('Blog Entry'),
       'base' => 'node_content',
       'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
-    'course_guide_link' => array(
-      'name' => t('Course Guide Link'),
-      'base' => 'node_content',
-      'description' => t('Link to a Course Guide'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
