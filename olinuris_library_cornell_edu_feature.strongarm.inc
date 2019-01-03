@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * olinuris_library_cornell_edu_feature.strongarm.inc
@@ -9,6 +10,13 @@
  */
 function olinuris_library_cornell_edu_feature_strongarm() {
   $export = array();
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_banner_image';
+  $strongarm->value = 0;
+  $export['comment_anonymous_banner_image'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -48,9 +56,23 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_banner_image';
+  $strongarm->value = '2';
+  $export['comment_banner_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_blog_entry';
   $strongarm->value = '1';
   $export['comment_blog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_banner_image';
+  $strongarm->value = 1;
+  $export['comment_default_mode_banner_image'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -86,6 +108,13 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm->name = 'comment_default_mode_laptop_count';
   $strongarm->value = 1;
   $export['comment_default_mode_laptop_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_banner_image';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_banner_image'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -126,7 +155,7 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_digital_sign';
-  $strongarm->value = '2';
+  $strongarm->value = '1';
   $export['comment_digital_sign'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -135,6 +164,13 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm->name = 'comment_equipment';
   $strongarm->value = '0';
   $export['comment_equipment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_banner_image';
+  $strongarm->value = 1;
+  $export['comment_form_location_banner_image'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -188,6 +224,13 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_banner_image';
+  $strongarm->value = '1';
+  $export['comment_preview_banner_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_blog_entry';
   $strongarm->value = '1';
   $export['comment_preview_blog_entry'] = $strongarm;
@@ -223,6 +266,13 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_banner_image';
+  $strongarm->value = 1;
+  $export['comment_subject_field_banner_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_blog_entry';
   $strongarm->value = 1;
   $export['comment_subject_field_blog_entry'] = $strongarm;
@@ -254,6 +304,155 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm->name = 'comment_subject_field_laptop_count';
   $strongarm->value = 1;
   $export['comment_subject_field_laptop_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_banner_image';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_banner_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_blog_entry';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_blog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_digital_sign';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_digital_sign'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_equipment';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_equipment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_imported_page';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_imported_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_laptop_count';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_laptop_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_banner_image';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_banner_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_blog_entry';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_blog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_digital_sign';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_digital_sign'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_equipment';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_equipment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_imported_page';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_imported_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_laptop_count';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_laptop_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_banner_image';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_banner_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_blog_entry';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_blog_entry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_digital_sign';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_digital_sign'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_equipment';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_equipment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_imported_page';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_imported_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_laptop_count';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_laptop_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__digital_sign';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '7',
+        ),
+        'redirect' => array(
+          'weight' => '6',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__digital_sign'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -339,6 +538,15 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_banner_image';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_banner_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_blog_entry';
   $strongarm->value = array();
   $export['menu_options_blog_entry'] = $strongarm;
@@ -382,6 +590,13 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_banner_image';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_banner_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_blog_entry';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_blog_entry'] = $strongarm;
@@ -417,6 +632,16 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_banner_image';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_banner_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_blog_entry';
   $strongarm->value = array(
     0 => 'status',
@@ -430,8 +655,7 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm->name = 'node_options_digital_sign';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
-    2 => 'revision',
+    1 => 'revision',
   );
   $export['node_options_digital_sign'] = $strongarm;
 
@@ -466,6 +690,13 @@ function olinuris_library_cornell_edu_feature_strongarm() {
     2 => 'revision',
   );
   $export['node_options_laptop_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_banner_image';
+  $strongarm->value = '1';
+  $export['node_preview_banner_image'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -505,6 +736,13 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_banner_image';
+  $strongarm->value = 1;
+  $export['node_submitted_banner_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_blog_entry';
   $strongarm->value = 0;
   $export['node_submitted_blog_entry'] = $strongarm;
@@ -513,7 +751,7 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_digital_sign';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_digital_sign'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -585,6 +823,13 @@ function olinuris_library_cornell_edu_feature_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_equipment_description_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_equipment_description_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_equipment_reservation_category_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_equipment_reservation_category_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
