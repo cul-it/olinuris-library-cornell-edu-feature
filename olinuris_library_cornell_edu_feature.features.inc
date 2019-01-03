@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * olinuris_library_cornell_edu_feature.features.inc
@@ -19,7 +20,7 @@ function olinuris_library_cornell_edu_feature_ctools_plugin_api($module = NULL, 
 function olinuris_library_cornell_edu_feature_node_info() {
   $items = array(
     'banner_image' => array(
-      'name' => t('Banner Image'),
+      'name' => t('TO DELETE - Banner Image'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
@@ -45,7 +46,7 @@ function olinuris_library_cornell_edu_feature_node_info() {
     'equipment' => array(
       'name' => t('Equipment'),
       'base' => 'node_content',
-      'description' => t('Borrowable equipment from web service http://mannservices.mannlib.cornell.edu/LibServices/showEquipmentInfo.do?locationId=18&output=xml '),
+      'description' => t('Borrowable equipment from web service http://api.library.cornell.edu/LibServices/showEquipmentInfo.do?locationId=18&output=xml '),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

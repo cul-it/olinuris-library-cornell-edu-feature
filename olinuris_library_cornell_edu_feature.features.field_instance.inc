@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * olinuris_library_cornell_edu_feature.features.field_instance.inc
@@ -147,7 +148,7 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'display_all_day' => 0,
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -202,7 +203,7 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'display_all_day' => 0,
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -356,7 +357,53 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-digital_sign-field_order'.
+  $field_instances['node-digital_sign-field_order'] = array(
+    'bundle' => 'digital_sign',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Add a number to set the order of digital signs on the home page',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_integer',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_order',
+    'label' => 'Sort order',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 5,
     ),
   );
 
@@ -406,7 +453,7 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => -3,
+      'weight' => 2,
     ),
   );
 
@@ -463,7 +510,7 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => -1,
+      'weight' => 4,
     ),
   );
 
@@ -510,7 +557,7 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'display_all_day' => 0,
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -518,7 +565,7 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => -2,
+      'weight' => 3,
     ),
   );
 
@@ -681,7 +728,7 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_equipment_date_due',
-    'label' => 'Equipment Date Due',
+    'label' => 'Obsolete Equipment Date Due',
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
@@ -695,10 +742,11 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'display_all_day' => 0,
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
+        'no_fieldset' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
@@ -830,7 +878,7 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'display_all_day' => 0,
-        'increment' => 15,
+        'increment' => 1,
         'input_format' => 'm/d/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -1092,6 +1140,91 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-equipment-field_equipment_reservation_term'.
+  $field_instances['node-equipment-field_equipment_reservation_term'] = array(
+    'bundle' => 'equipment',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_equipment_reservation_term',
+    'label' => 'Equipment Reservation Term',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 16,
+    ),
+  );
+
+  // Exported field_instance: 'node-equipment-field_equipment_themed_availabil'.
+  $field_instances['node-equipment-field_equipment_themed_availabil'] = array(
+    'bundle' => 'equipment',
+    'default_value' => array(
+      0 => array(
+        'value' => 'No entry necessary.',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'This is a stand-in field to allow theme code to draw the Available / Due Back (when) display for equipment. The code is in the theme here: views-view-field--field-equipment-themed-availabil.tpl.php',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_equipment_themed_availabil',
+    'label' => 'Equipment Themed Availability',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 18,
     ),
   );
 
@@ -1472,8 +1605,174 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'taxonomy_term-equipment_reservation_category-field_exclude_this_category'.
+  $field_instances['taxonomy_term-equipment_reservation_category-field_exclude_this_category'] = array(
+    'bundle' => 'equipment_reservation_category',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Exclude a category of items like macbook or charger. Only list Big Red Equipment.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_exclude_this_category',
+    'label' => 'Exclude this Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-equipment_reservation_category-field_pickup_reserve_button_code'.
+  $field_instances['taxonomy_term-equipment_reservation_category-field_pickup_reserve_button_code'] = array(
+    'bundle' => 'equipment_reservation_category',
+    'default_value' => array(
+      0 => array(
+        'value' => 'No text  entry needed.',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'This is a placeholder that allows special rendering of these taxonomy terms in code. Find the code in the theme file /sites/all/themes/olinuris/templates/views-view-field--equipment-loans-reserves--field_pickup_reserve_button_code.tpl.php',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_pickup_reserve_button_code',
+    'label' => 'Pickup Reserve Button code',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-equipment_reservation_category-field_reservation_id'.
+  $field_instances['taxonomy_term-equipment_reservation_category-field_reservation_id'] = array(
+    'bundle' => 'equipment_reservation_category',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_integer',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_reservation_id',
+    'label' => 'Reservation ID',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-equipment_reservation_category-field_reservation_required'.
+  $field_instances['taxonomy_term-equipment_reservation_category-field_reservation_required'] = array(
+    'bundle' => 'equipment_reservation_category',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_reservation_required',
+    'label' => 'Reservation Required',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 32,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('Add a number to set the order of digital signs on the home page');
   t('Banner Image Photo');
   t('Banner Image Sunrise');
   t('Banner Image Sunset');
@@ -1481,7 +1780,6 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
   t('Body');
   t('Equipment Available');
   t('Equipment BibID');
-  t('Equipment Date Due');
   t('Equipment Description');
   t('Equipment Description Term');
   t('Equipment Due Date');
@@ -1491,18 +1789,29 @@ function olinuris_library_cornell_edu_feature_field_default_field_instances() {
   t('Equipment Name');
   t('Equipment Reference');
   t('Equipment Reservable');
+  t('Equipment Reservation Term');
+  t('Equipment Themed Availability');
   t('Equipment Type');
+  t('Exclude a category of items like macbook or charger. Only list Big Red Equipment.');
+  t('Exclude this Category');
   t('Imported Page Contact');
   t('Imported Page Section');
   t('Laptop Count Library');
   t('Laptop Count Mac');
   t('Laptop Count PC');
   t('Library Name');
+  t('Obsolete Equipment Date Due');
+  t('Pickup Reserve Button code');
   t('Provides a link between page describing the equipment and the availability information reported via feeds.');
+  t('Reservation ID');
+  t('Reservation Required');
   t('SIgn Visible During');
   t('Sign Image');
   t('Sign Image Link');
   t('Simple name of the library for header');
+  t('Sort order');
+  t('This is a placeholder that allows special rendering of these taxonomy terms in code. Find the code in the theme file /sites/all/themes/olinuris/templates/views-view-field--equipment-loans-reserves--field_pickup_reserve_button_code.tpl.php');
+  t('This is a stand-in field to allow theme code to draw the Available / Due Back (when) display for equipment. The code is in the theme here: views-view-field--field-equipment-themed-availabil.tpl.php');
   t('Valid if item is NOT available');
 
   return $field_instances;
